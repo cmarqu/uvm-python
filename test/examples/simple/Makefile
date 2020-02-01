@@ -1,4 +1,8 @@
 
+.PHONY: test test-trivial test-basic_examples test-sequence test-interfaces test-hello_world\
+    test-registers test-tlm1 test-configuration test-callbacks test-factory\
+    test-objections test-phases
+
 test: test-trivial test-basic_examples test-sequence test-interfaces test-hello_world\
     test-registers test-tlm1 test-configuration test-callbacks test-factory\
     test-objections test-phases
