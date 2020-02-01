@@ -1,3 +1,4 @@
+.PHONY: test test-ubus test-codec
 
 test: test-ubus
 
