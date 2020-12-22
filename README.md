@@ -1,5 +1,6 @@
 ![Build](https://github.com/tpoikela/uvm-python/workflows/Build/badge.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/tpoikela/uvm-python/badge.svg?branch=master)](https://coveralls.io/github/tpoikela/uvm-python?branch=master)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/tpoikela/uvm-python)
 
 UVM library for Python
 ======================
@@ -7,7 +8,7 @@ UVM library for Python
 This is a port of SystemVerilog (SV) Universal Verification Methodology (UVM)
 1.2 to Python and cocotb. Only Icarus Verilog (iverilog) has been used for
 testing the code so
-far, but the plan is to include verilator in the regressions as well.
+far, but the plan is to include Verilator in the regressions as well.
 
 See documentation for more details:
   - [uvm-python Documentation](https://uvm-python.readthedocs.io/).
@@ -22,6 +23,8 @@ testbenches can be written in Python as well. `uvm-python` tries to offer
 an API similar to the original SV version. This means that many UVM verificaton
 skills are transferable from SV to Python very easily.
 
+Using `uvm-python` also means that you can have a UVM testbench with a VHDL-only simulator.
+
 Documentation
 -------------
 
@@ -31,7 +34,7 @@ The documentation is available on `readthedocs.io` in
 Installation
 ------------
 
-You can install uvm-python as a normal Python package. It is recommended to use
+You can install `uvm-python` as a normal Python package. It is recommended to use
 [venv](https://docs.python.org/3/library/venv.html) to create a virtual
 environment for Python prior to installation.
 
@@ -123,10 +126,10 @@ async def test_dut(dut):
 
 Current status
 --------------
-Current status: Testbenches can already be written with all the typical UVM 
+Current status: Testbenches can already be written with all the typical UVM
 components. UVM Phasing is in place, and working. Stimulus can be generated
 using hierarchical sequences. Register
-layer supports already read/write to registers (via frontdoor), and to 
+layer supports already read/write to registers (via frontdoor), and to
 memories (frontdoor and backdoor). TLM 1.0 is implemented,
 put/get/analysis interfaces are done, and master/slave interfaces work. Initial
 implementation of TLM2.0 has also been added. The table below summarizes the
@@ -150,10 +153,10 @@ and create a pull request!
 HDL Simulators
 --------------
 
-Icarus Verilog (iverilog v11.0) and verilator (v4.030+) are free simulators, which can
-be used with cocotb. uvm-python uses cocotb to interface with these simulators.
+Icarus Verilog (iverilog v11.0) and verilator (v4.106+) are free simulators which can
+be used with cocotb. `uvm-python` uses cocotb to interface with these simulators.
 Memory backdoor access has issues with packed multi-dimensional arrays in
-verilator.
+Verilator.
 
 Proprietary simulators that work with cocotb can of course be used with
-uvm-python as well.
+`uvm-python` as well, including VHDL-only simulators.
